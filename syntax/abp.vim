@@ -54,3 +54,5 @@ hi ABPBlockException ctermfg=Green guifg=Green
 hi ABPElemhide ctermfg=DarkRed guifg=DarkRed
 hi ABPOption ctermfg=DarkBlue guifg=DarkBlue
 hi ABPElemhideException ctermfg=DarkGreen guifg=DarkGreen
+
+let b:current_syntax = "abp"
