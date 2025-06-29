@@ -28,6 +28,7 @@ syntax match abpHidingSeparator "##" contained nextgroup=abpHiding
 syntax match abpHidingExceptionSeparator "#@#" contained nextgroup=abpHidingException
 syntax match abpHiding ".*" contained
 syntax match abpHidingException ".*" contained
+"syntax match abpHidingModify
 
 " Highlights
 hi link abpHeader Comment
@@ -35,24 +36,33 @@ hi link abpComment Comment
 hi link abpCommentKey Comment
 hi link abpCommentValue SpecialComment
 hi link abpBlocking ABPBlock
-hi link abpBlockingSeparator Delimiter
-hi link abpBlockingOption ABPOption
+hi link abpBlockingSeparator ABPSeparator
+hi link abpBlockingOption ABPBlockOption
 hi link abpBlockingException ABPBlockException
-hi link abpBlockingExceptionSeparator Delimiter
+hi link abpBlockingExceptionSeparator ABPDelimiter
 hi link abpHiding ABPElemhide
-hi link abpHidingSeparator Delimiter
-hi link abpHidingExceptionSeparator Delimiter
+hi link abpHidingSeparator ABPDelimiter
+hi link abpHidingExceptionSeparator ABPDelimiter
 hi link abpHidingOption ABPOption
 hi link abpHidingException ABPElemhideException
 
 " Colors
-hi Comment ctermfg=Gray guifg=Gray
-hi SpecialComment ctermfg=DarkGray guifg=DarkGray
-hi Delimiter ctermfg=DarkGray guifg=DarkGray
-hi ABPBlock ctermfg=Red guifg=Red
-hi ABPBlockException ctermfg=Green guifg=Green
-hi ABPElemhide ctermfg=DarkRed guifg=DarkRed
-hi ABPOption ctermfg=DarkBlue guifg=DarkBlue
-hi ABPElemhideException ctermfg=DarkGreen guifg=DarkGreen
+hi link ABPSeparator cleared
+hi link ABPDelimiter Typedef
+hi link ABPBlock TODO
+hi link ABPBlockOption Error
+hi link ABPBlockException Identifier
+hi link ABPElemhide Statement
+hi link ABPOption Define
+hi link ABPElemhideException Special
+
+"hi Comment ctermfg=Gray guifg=Gray
+"hi SpecialComment ctermfg=DarkGray guifg=DarkGray
+"hi Delimiter ctermfg=DarkGray guifg=DarkGray
+"hi ABPBlock ctermfg=Red guifg=Red
+"hi ABPBlockException ctermfg=Green guifg=Green
+"hi ABPElemhide ctermfg=DarkRed guifg=DarkRed
+"hi ABPOption ctermfg=DarkBlue guifg=DarkBlue
+"hi ABPElemhideException ctermfg=DarkGreen guifg=DarkGreen
 
 let b:current_syntax = "abp"
